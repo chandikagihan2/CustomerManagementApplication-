@@ -5,9 +5,16 @@ function addCustomer() {
     const city = document.getElementById("txtCity").value;
     const salary = document.getElementById("txtSalary").value;
 
-    const customer = {  cId, name, age, city, salary };
+    const customer = { cId, name, age, city, salary };
     customerNames.push(customer);
     loadCustomerTable();
+
+    document.getElementById("txtCid").value = "";
+    document.getElementById("txtName").value = "";
+    document.getElementById("txtAge").value = "";
+    document.getElementById("txtCity").value = "";
+    document.getElementById("txtSalary").value = "";
+
 }
 
 const customerNames = [];
@@ -45,6 +52,12 @@ function addItem() {
     const item = { id, name, price, discount };
     ItemNames.push(item);
     loadItemTable();
+
+    document.getElementById("txtItemId").value = "";
+    document.getElementById("txtItemName").value = "";
+    document.getElementById("txtPrice").value = "";
+    document.getElementById("txtDiscount").value = "";
+
 }
 
 const ItemNames = [];
