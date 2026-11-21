@@ -6,7 +6,7 @@
     <title>Customer Table</title>
 </head>
 <body>
-        <input id="txtId" type="text" placeholder="Enter your ID" required>
+        <input id="txtCid" type="text" placeholder="Enter your ID" required>
         <input id="txtName" type="text" placeholder="Enter your name" required>
         <input id="txtAge" type="number" min="0" placeholder="Enter your age" required>
         <input id="txtCity" type="text" placeholder="Enter your city" required>
@@ -16,7 +16,7 @@
     <table id="CustomerTable" border="2">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Customer ID</th>
                 <th>Name</th>
                 <th>Age</th>
                 <th>City</th>
@@ -27,10 +27,9 @@
     </table>
 
 
-        <input id="txtId" type="text" placeholder="Enter Item ID" required>
-        <input id="txtItem" type="text" placeholder="Enter Item Name" required>
+        <input id="txtItemId" type="text" placeholder="Enter Item ID" required>
+        <input id="txtItemName" type="text" placeholder="Enter Item Name" required>
         <input id="txtPrice" type="number" min="0" placeholder="Enter Price" required>
-        <input id="txtMaterial" type="text" placeholder="Enter Material" required>
         <input id="txtDiscount" type="number" min="0" step="any" placeholder="Enter Discount" required>
         <button type="submit" onclick="addItem()">Add Item</button>
 
@@ -40,7 +39,6 @@
                 <th>ID</th>
                 <th>Item Name</th>
                 <th>Price</th>
-                <th>Material</th>
                 <th>Discount</th>
             </tr>
         </thead>

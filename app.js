@@ -1,11 +1,11 @@
 function addCustomer() {
-    const id = document.getElementById("txtId").value;
+    const cId = document.getElementById("txtCid").value;
     const name = document.getElementById("txtName").value;
     const age = document.getElementById("txtAge").value;
     const city = document.getElementById("txtCity").value;
     const salary = document.getElementById("txtSalary").value;
 
-    const customer = { id, name, age, city, salary };
+    const customer = {  cId, name, age, city, salary };
     customerNames.push(customer);
     loadCustomerTable();
 }
@@ -14,7 +14,7 @@ const customerNames = [];
 
 function loadCustomerTable() {
     let body = `<tr>
-        <th>ID</th>
+        <th>Customer ID</th>
         <th>Name</th>
         <th>Age</th>
         <th>City</th>
@@ -24,7 +24,7 @@ function loadCustomerTable() {
 
     for (let customer of customerNames) {
         body += `<tr>
-            <td>${customer.id}</td>
+            <td>${customer.cId}</td>
             <td>${customer.name}</td>
             <td>${customer.age}</td>
             <td>${customer.city}</td>
@@ -34,26 +34,26 @@ function loadCustomerTable() {
     document.getElementById("CustomerTable").innerHTML = body;
 
 }
-function addCustomer() {
-    const id = document.getElementById("txtId").value;
-    const name = document.getElementById("txtName").value;
-    const price = document.getElementById("txtAge").value;
-    const  = document.getElementById("txtCity").value;
-    const salary = document.getElementById("txtSalary").value;
 
-    const customer = { id, name, age, city, salary };
-    customerNames.push(customer);
-    loadCustomerTable();
+
+function addItem() {
+    const id = document.getElementById("txtItemId").value;
+    const name = document.getElementById("txtItemName").value;
+    const price = document.getElementById("txtPrice").value;
+    const discount = document.getElementById("txtDiscount").value;
+
+    const item = { id, name, price, discount };
+    ItemNames.push(item);
+    loadItemTable();
 }
 
 const ItemNames = [];
 
 function loadItemTable() {
     let body = `<tr>
-        <th>ID</th>
+        <th>Item ID</th>
         <th>Item Name</th>
         <th>Price</th>
-        <th>Material</th>
         <th>Discount</th>
     </tr>`;
 
@@ -63,11 +63,10 @@ function loadItemTable() {
             <td>${item.id}</td>
             <td>${item.name}</td>
             <td>${item.price}</td>
-            <td>${item.material}</td>
             <td>${item.discount}</td>
         </tr>`;
     }
-    document.getElementById("CustomerTable").innerHTML = body;
+    document.getElementById("ItemTable").innerHTML = body;
 
 }
 
